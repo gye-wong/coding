@@ -1,0 +1,21 @@
+package main
+import (
+    "fmt"
+)
+ 
+func main() {
+    var nama, mataKuliah string
+    var nilai, nim int
+    fmt.Println("masukan kode : ")
+    fmt.Scan(&nim)
+    fmt.Println("masukan nama: ")
+    fmt.Scanf("%s", &nama)
+    fmt.Println("masukan produc: ")
+    fmt.Scanf("%s", &mataKuliah)
+    fmt.Println("masukan type barang: ")
+    fmt.Scanln(&nilai)
+    fmt.Println("ketik jumblahnya: ")
+    fmt.Scanln(&nilai)
+}
+
+//gye wong
