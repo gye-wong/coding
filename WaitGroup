@@ -26,3 +26,34 @@ func main() {
 //asu3
 
 //gyewong
+
+//type2
+package main
+import (
+    "fmt"
+    "runtime"
+    "sync"
+)
+ 
+func main() {
+    runtime.GOMAXPROCS(2)
+    var wg sync.WaitGroup
+ 
+    wg.Add(2)
+    go func() {
+        defer wg.Done()
+        fmt.Println("fungsi satu ")
+    }()
+ 
+    go func() {
+        defer wg.Done()
+        fmt.Println("fungsi dua ")
+    }()
+ 
+    wg.Wait()
+}
+// maka hasilnya akan seperti
+// fungsi satru
+// fungsi dua
+
+// gye wong
