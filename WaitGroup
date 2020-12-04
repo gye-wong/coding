@@ -1,0 +1,28 @@
+package main
+ 
+import (
+    "fmt"
+    "time"
+)
+ 
+func cetak(name string) {
+    fmt.Println(name)
+}
+ 
+func main() {
+ 
+    datamhs := []string{"asu1", "asu2",
+        "Charly", "asu3", "asu4"}
+ 
+    for _, s := range datamhs {
+        time.Sleep(250 * time.Millisecond)
+        go cetak(s)
+    }
+}
+
+// mka hasilnya akan seperti
+//asu1
+//asu2
+//asu3
+
+//gyewong
